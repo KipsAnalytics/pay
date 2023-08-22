@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systems' | Online Purchase</title>
+     <!-- font awesome icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Pay Via</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-paypal"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social"><i class="fab fa-fa-money"></i></a>
+                </div>
+                <u>Systems' Expense Breakdown</u>
+                <ul>
+                    <li>Systems' Plugin KES 32,250.00 </li>
+                    <li>Installation & Configuration KES 12,000.00</li>
+                    <li>Email and Sms API KES 9,875.00</li>
+                  </ul>
+                  <br></br>
+               <h4><strong>Grand Total: KES 54,125</strong></h4>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your account</span>
+                <div class="infield">
+                    <input type="email" placeholder="School E-mail" name="email"/>
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="password" placeholder="Password" />
+                    <label></label>
+                </div>
+                <a href="#" class="forgot">Forgot your password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container" id="overlayCon">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome!</h1>
+                    <p>to Online Kips Analytic System.<br>Welcome!!!</p>
+                    <button>Purchase</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hey, Thanks!</h1>
+                    <p>Thanks for the purchase, <br>enjoy the brand.</strong></p>
+                    <button>Back</button>
+                </div>
+            </div>
+            <button id="overlayBtn"></button>
+        </div>
+    </div>
+
+    <footer>
+        
+    </footer>
+    
+    <!-- js code -->
+    <script>
+    
+    
+         const container = document.getElementById('container');
+         const overlayCon = document.getElementById('overlayCon');
+         const overlayBtn = document.getElementById('overlayBtn');
+
+         overlayBtn.addEventListener('click', ()=>{
+             container.classList.toggle('right-panel-active');
+
+             overlayBtn.classList.remove('btnScaled');
+             window.requestAnimationFrame( ()=>{
+                overlayBtn.classList.add('btnScaled');
+             })
+         });
+    
+    
+    </script>
+    
+</body>
+</html>
